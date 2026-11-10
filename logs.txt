@@ -1,0 +1,20 @@
+[2026-11-09 20:31:39] [INFO] [Simulacion] -> INICIO DE SIMULACIÓN DE OPERACIONES DEL SISTEMA
+[2026-11-09 20:31:39] [INFO] [Simulacion] -> Operación #1 completada satisfactoriamente
+[2026-11-09 20:31:39] [INFO] [Simulacion] -> Operación #2 completada satisfactoriamente
+[2026-11-09 20:31:39] [INFO] [Simulacion] -> Operación #3 completada satisfactoriamente
+[2026-11-09 20:31:39] [INFO] [Simulacion] -> Operación #4 completada satisfactoriamente
+[2026-11-09 20:31:39] [INFO] [Simulacion] -> Operación #5 completada satisfactoriamente
+[2026-11-09 20:31:39] [INFO] [Reserva] -> Reserva RES-01 CONFIRMADA con éxito. Total: $240,975.00
+[2026-11-09 20:31:39] [INFO] [Simulacion] -> Operación #6 completada satisfactoriamente
+[2026-11-09 20:31:39] [INFO] [Reserva] -> Reserva RES-02 CONFIRMADA con éxito. Total: $1,523,200.00
+[2026-11-09 20:31:39] [INFO] [Simulacion] -> Operación #7 completada satisfactoriamente
+[2026-11-09 20:31:39] [ERROR] [Op#8_FALLO: CLIENTE CON EMAIL INVÁLIDO] -> Tipo: ClienteInvalidoError | Detalle: [ERR-CLI-002] Formato de correo inválido: 'correo_sin_arroba_ni_dominio'.
+[2026-11-09 20:31:39] [ERROR] [Op#9_FALLO: SALA CON CAPACIDAD NEGATIVA] -> Tipo: ParametroServicioInvalidoError | Detalle: [ERR-SRV-004] Capacidad de sala inválida: -10. Rango permitido: 2-100.
+[2026-11-09 20:31:39] [ERROR] [Op#10_FALLO: RESERVA CON SERVICIO NO DISPONIBLE] -> Tipo: ServicioNoDisponibleError | Detalle: [ERR-SRV-003] El servicio 'Arquitectura Cloud AWS' no se encuentra disponible actualmente.
+[2026-11-09 20:31:39] [WARNING] [Reserva] -> Reserva RES-01 CANCELADA. Causa: Reunión pospuesta por el cliente
+[2026-11-09 20:31:39] [ERROR] [Op#11_FALLO: CANCELACIÓN DE RESERVA YA CANCELADA] -> Tipo: ReservaIncorrectaError | Detalle: [ERR-RES-005] La reserva ya se encuentra cancelada.
+[2026-11-09 20:31:39] [ERROR] [Op#12_FALLO: RESERVA CON DURACIÓN ILÍCITA (0 HORAS)] -> Tipo: ReservaIncorrectaError | Detalle: [ERR-RES-005] Duración 0.0h inválida. Rango permitido: 0.5 a 72 horas.
+[2026-11-09 20:42:22] [ERROR] [GUI_RegistrarCliente] -> Tipo: ClienteInvalidoError | Detalle: [ERR-CLI-002] Formato de correo inválido: 'anderson2058gmail,com'.
+[2026-11-09 20:43:59] [ERROR] [GUI_RegistrarCliente] -> Tipo: ClienteInvalidoError | Detalle: [ERR-CLI-002] Formato de correo inválido: 'anderson.herrera2058@gmail,com'.
+[2026-11-09 20:44:18] [INFO] [GUI] -> Cliente registrado vía GUI: CLI-01
+[2026-11-09 20:44:42] [INFO] [Reserva] -> Reserva RES-01 CONFIRMADA con éxito. Total: $240,975.00
