@@ -1,0 +1,24 @@
+[2026-11-15 08:02:14] [INFO] [Main] Iniciando ejecución integral de Software FJ...
+[2026-11-15 08:02:14] [INFO] [Simulaciones] === INICIO DE BATERÍA DE SIMULACIONES (12 CASOS) ===
+[2026-11-15 08:02:14] [INFO] [Reserva] RES-1001 procesada para Carlos Mendoza | Total: $380,800.00
+[2026-11-15 08:02:14] [INFO] [Reserva] Reserva RES-1001 CONFIRMADA.
+[2026-11-15 08:02:14] [INFO] [Reserva] RES-1002 procesada para Laura Martínez | Total: $722,925.00
+[2026-11-15 08:02:14] [INFO] [Reserva] Reserva RES-1002 CONFIRMADA.
+[2026-11-15 08:02:14] [INFO] [Reserva] RES-1003 procesada para Andrés Gómez | Total: $285,600.00
+[2026-11-15 08:02:14] [INFO] [Reserva] Reserva RES-1003 CONFIRMADA.
+[2026-11-15 08:02:14] [ERROR] [Simulaciones] CASO 04 [Inválido - Documento] falló: [ERR-DATO-001] El documento debe ser numérico y tener entre 5 y 15 dígitos.
+[2026-11-15 08:02:14] [ERROR] [Simulaciones] CASO 05 [Inválido - Correo] falló: [ERR-DATO-001] El correo electrónico 'sofiacastro.com' no tiene un formato válido.
+[2026-11-15 08:02:14] [ERROR] [Reserva] Fallo al procesar RES-1004: [ERR-SERV-002] La duración del servicio debe ser mayor a 0 horas.
+[2026-11-15 08:02:14] [ERROR] [Simulaciones] CASO 06 [Inválido - 0 Horas] falló: [ERR-RESV-003] No fue posible procesar la reserva RES-1004 debido a un parámetro inválido.
+[2026-11-15 08:02:14] [ERROR] [Reserva] Fallo al procesar RES-1005: [ERR-SERV-002] No se permiten reservas mayores a 24 horas continuas.
+[2026-11-15 08:02:14] [ERROR] [Simulaciones] CASO 07 [Inválido - >24 Horas] falló: [ERR-RESV-003] No fue posible procesar la reserva RES-1005 debido a un parámetro inválido.
+[2026-11-15 08:02:14] [ERROR] [Simulaciones] CASO 08 [Inválido - Teléfono] falló: [ERR-DATO-001] El teléfono debe contener entre 7 y 12 dígitos numéricos.
+[2026-11-15 08:02:14] [ERROR] [Reserva] Fallo al procesar RES-1006: [ERR-SERV-002] El descuento debe estar entre 0% (0.0) y 50% (0.5).
+[2026-11-15 08:02:14] [ERROR] [Simulaciones] CASO 09 [Inválido - Descuento 80%] falló: [ERR-RESV-003] No fue posible procesar la reserva RES-1006 debido a un parámetro inválido.
+[2026-11-15 08:02:14] [INFO] [Reserva] RES-1007 procesada para Elena Vargas | Total: $285,600.00
+[2026-11-15 08:02:14] [INFO] [Reserva] Reserva RES-1007 CONFIRMADA.
+[2026-11-15 08:02:14] [WARNING] [Reserva] Reserva RES-1007 CANCELADA. Motivo: Reprogramación solicitada en simulación
+[2026-11-15 08:02:14] [ERROR] [Simulaciones] CASO 11 [Inválido - Nombre Numérico] falló: [ERR-DATO-001] El nombre debe tener al menos 3 caracteres y no contener números.
+[2026-11-15 08:02:14] [INFO] [Reserva] RES-1008 procesada para Camila Ortiz | Total: $321,300.00
+[2026-11-15 08:02:14] [INFO] [Reserva] Reserva RES-1008 CONFIRMADA.
+[2026-11-15 08:02:14] [INFO] [Simulaciones] === FIN SIMULACIONES: 5 exitosas ===
