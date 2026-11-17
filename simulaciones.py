@@ -39,6 +39,7 @@ def ejecutar_simulaciones() -> list:  # Función principal que ejecuta las 12 pr
                 reserva.cancelar("Reprogramación solicitada en simulación")  # Ejecuta cancelación
             reservas_exitosas.append(reserva)  # Almacena reserva exitosa
             print(f"[OK] {titulo} -> {reserva.codigo} | Estado: {reserva.estado} | Total: ${reserva.detalle_financiero['total']:,.2f}")
+            print(f"    Contacto: {reserva.cliente.obtener_resumen_contacto()} | Doc válido: {reserva.cliente.validar_longitud_documento()}")
         except ErrorSistema as error_controlado:  # Captura cualquier excepción del dominio
             GestorRegistro.registrar("ERROR", "Simulaciones", f"{titulo} falló: {error_controlado}")  # Registra en log
             print(f"[CONTROLADO] {titulo} -> {error_controlado}")  # Muestra error controlado en consola
