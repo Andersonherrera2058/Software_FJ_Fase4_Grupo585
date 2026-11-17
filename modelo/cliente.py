@@ -64,6 +64,14 @@ class Cliente(Entidad):  # Clase concreta Cliente que hereda de Entidad
     def telefono(self) -> str:  # Propiedad de solo lectura para teléfono
         return self.__telefono  # Devuelve el teléfono privado
 
+    def obtener_resumen_contacto(self) -> str:  # Devuelve un resumen con los datos de contacto
+        """Retorna el nombre, correo y teléfono del cliente."""  # Explica el contenido del resumen
+        return f"{self.nombre} | {self.correo} | {self.telefono}"  # Construye y devuelve el resumen
+
+    def validar_longitud_documento(self) -> bool:  # Comprueba la longitud del documento
+        """Indica si el documento tiene entre 5 y 15 dígitos."""  # Describe el rango permitido
+        return 5 <= len(self.documento) <= 15  # Devuelve True si está dentro del rango
+
     def describir(self) -> str:  # Implementación obligatoria del método abstracto describir
         """Retorna una cadena descriptiva con los datos del cliente."""  # Docstring
         return f"Cliente {self.__nombre} (ID: {self.__documento}) - {self.__correo}"  # Formatea salida
