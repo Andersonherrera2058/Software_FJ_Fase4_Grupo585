@@ -150,6 +150,7 @@ class SoftwareFJApp(tk.Tk):  # Ventana principal de la aplicación en inglés
                 )
             )
             messagebox.showinfo("Booking Confirmed", f"Booking {reserva.codigo} successfully registered!")
+            print(cliente.obtener_resumen_contacto(), cliente.validar_longitud_documento())
         except ValueError:  # Captura errores si escriben texto en campos numéricos
             messagebox.showerror("Input Error", "Hours must be an integer and Discount must be a decimal number.")
         except ErrorSistema as err:  # Captura cualquier excepción personalizada del dominio
