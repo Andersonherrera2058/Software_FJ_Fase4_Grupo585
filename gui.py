@@ -7,10 +7,9 @@
 import tkinter as tk  # Importa librería estándar Tkinter para interfaces gráficas
 from tkinter import ttk, messagebox  # Importa widgets modernos (Treeview, Combobox) y cuadros de diálogo
 from modelo.cliente import Cliente  # Importa clase Cliente del Rol 3
-from modelo.servicios import ReservaSalas, AlquilerEquipos, AsesoriaEspecializada  # Importa servicios Rol 4
+from modelo.servicios import (ReservaSalas, AlquilerEquipos,AsesoriaEspecializada,ServicioExpress)  # Importa clases de servicios del Rol 4
 from modelo.reserva import Reserva  # Importa clase Reserva
 from modelo.excepciones import ErrorSistema  # Importa excepción base del Rol 2
-
 
 class SoftwareFJApp(tk.Tk):  # Ventana principal de la aplicación en inglés
     """Main desktop GUI window for Software FJ Booking Management System."""  # Docstring en inglés
@@ -54,11 +53,16 @@ class SoftwareFJApp(tk.Tk):  # Ventana principal de la aplicación en inglés
 
         ttk.Label(frame_form, text="Select Service:").grid(row=2, column=0, sticky="w", padx=5, pady=4)
         self.cmb_service = ttk.Combobox(
-            frame_form,
-            values=["Room Booking", "Equipment Rental", "Specialized Consulting"],
-            state="readonly",
-            width=22
-        )
+    frame_form,
+    values=[
+        "Room Booking",
+        "Equipment Rental",
+        "Specialized Consulting",
+        "Express Service"
+    ],
+    state="readonly",
+    width=22
+)
         self.cmb_service.current(0)  # Selecciona Room Booking por defecto
         self.cmb_service.grid(row=2, column=1, padx=5, pady=4)
 
@@ -111,6 +115,8 @@ class SoftwareFJApp(tk.Tk):  # Ventana principal de la aplicación en inglés
             return ReservaSalas(capacidad=25)  # Retorna instancia de sala
         if seleccion == "Equipment Rental":
             return AlquilerEquipos(cantidad_equipos=2)  # Retorna instancia de equipos
+        if seleccion == "Express Service":
+            return ServicioExpress(recargo_express=25000.0)  # Retorna instancia de servicio express
         return AsesoriaEspecializada(especialidad="Software Architecture")  # Retorna instancia de asesoría
 
     def _procesar_reserva(self) -> None:  # Invoca las clases del modelo capturando excepciones

@@ -92,3 +92,50 @@ class AsesoriaEspecializada(Servicio):  # Tercera clase hija especializada: Ases
 
     def describir(self) -> str:  # Sobrescribe describir para asesoría
         return f"{self.nombre} [{self.especialidad}] (${self.tarifa_hora:,.0f}/h)"  # Descripción
+    
+    
+
+class ServicioExpress(Servicio):
+    """
+    Servicio especializado con atención prioritaria
+    y un recargo fijo por modalidad express.
+    """
+
+    def __init__(self, recargo_express: float = 25000.0):
+        super().__init__(
+            nombre="Express Service",
+            tarifa_hora=150000.0
+        )
+
+        if (
+            not isinstance(recargo_express, (int, float))
+            or isinstance(recargo_express, bool)
+            or recargo_express < 0
+        ):
+            raise ServicioNoDisponibleError(
+                "El recargo express debe ser un valor numérico no negativo."
+            )
+
+        self.recargo_express = recargo_express
+
+    def calcular_costo(
+        self,
+        horas: int,
+        impuesto: float = 0.19,
+        descuento: float = 0.0,
+        recargo_extra: float = 0.0
+    ) -> dict:
+        # Sobrescribe el cálculo heredado y suma el recargo express.
+        return super().calcular_costo(
+            horas=horas,
+            impuesto=impuesto,
+            descuento=descuento,
+            recargo_extra=recargo_extra + self.recargo_express
+        )
+
+    def describir(self) -> str:
+        return (
+            f"{self.nombre} "
+            f"(${self.tarifa_hora:,.0f}/h + "
+            f"${self.recargo_express:,.0f} de recargo express)"
+        )
